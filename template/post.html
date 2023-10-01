@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-<!-- #ead -->
+<head>
+    <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/lightmode.css">
+</head>
 
-<!-- #header -->
+<header id="header">
+    <a href="./index.html">Home</a>
+    <a href="github.com/RaulCotar">GitHub</a>
+    <a>
+        <input type="radio" name="theme_radio" id="theme_drk" title="dark theme" class="theme_button">
+        <input type="radio" name="theme_radio" id="theme_lit" title="light theme" class="theme_button">
+        <input type="radio" name="theme_radio" id="theme_def" title="browser theme" class="theme_button">
+    </a>
+</header>
 
 <body>
     <main>
-        <h1>
-            <!-- title -->
-        </h1>
-
-        <!-- content -->
-
+        $body$
     </main>
 </body>
 
-<!-- #footer -->
+<footer>
+    &ltfooter&gt
+</footer>
 
 </html>

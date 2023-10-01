@@ -1,0 +1,27 @@
+:root {
+    --theme_name: "light";
+    color: black;
+    background: #e5e5e0;
+    accent-color: #e93d13;
+}
+
+pre {
+    border-color: #69c;
+}
+
+pre,
+code {
+    background: #d6d6d0;
+}
+
+time {
+    color: #665;
+}
+
+:link {
+    color: #0000EE;
+}
+
+:visited {
+    color: #551A8B;
+}

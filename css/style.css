@@ -1,0 +1,50 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Verdana", "Helvetica", "Open Sans", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    padding-top: 1em;
+}
+
+pre {
+    padding: 1em;
+    border: 1px solid;
+}
+
+code {
+    padding: 0.3em;
+}
+
+code, pre {
+    font-family: "Noto Sans Mono", "Roboto", monospace;
+    border-radius: 8px;
+    font-size: 0.8em;
+}
+
+h2 {
+    padding-top: 1em;
+    line-height: 1em;
+}
+
+footer {
+    padding-top: 2.5em;
+}
+
+.index_entry {
+    line-height: 2em;
+}
+
+.theme_button {
+    border-radius: 12px;
+    float: right;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+time {
+    padding-right: 1em;
+    font-weight: 500;
+}

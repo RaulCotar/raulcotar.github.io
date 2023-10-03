@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head id="head">
     <title>Raul Cotar's Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/lightmode.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        function changeTheme(css, radio) {
+            var old = document.getElementById("current_theme")
+            if (old) old.remove()
+            var new_theme = document.createElement('link') 
+            new_theme.rel = 'stylesheet'
+            new_theme.type = 'text/css'
+            new_theme.id = 'current_theme'
+            new_theme.href = css
+            document.getElementById('head').append(new_theme);
+            document.getElementById(radio).checked = true
+        }
+    </script>
 </head>
 
-<body>
+<body onLoad="changeTheme('css/lightmode.css', 'theme_lit')">
     <header id="header">
         <a href="./index.html">Home</a>
         <a href="https://github.com/RaulCotar">GitHub</a>
         <a>
-            <input type="radio" name="theme_radio" id="theme_drk" title="dark theme" class="theme_button">
-            <input type="radio" name="theme_radio" id="theme_lit" title="light theme" class="theme_button">
-            <input type="radio" name="theme_radio" id="theme_def" title="browser theme" class="theme_button">
+            <input type="radio" name="theme_radio" id="theme_drk" title="dark theme" onclick="changeTheme('css/darkmode.css', 'theme_drk')" class="theme_button">
+            <input type="radio" name="theme_radio" id="theme_lit" title="light theme" onclick="changeTheme('css/lightmode.css', 'theme_lit')" class="theme_button">lit
         </a>
     </header>
 
@@ -44,9 +56,5 @@
 <footer>
     &ltfooter&gt
 </footer>
-
-<script>
-    includeHTML();
-</script>
 
 </html>

@@ -1,5 +1,5 @@
 function changeTheme(theme) {
-    const n = window.location.pathname.split('/').length-7
+    const n = window.location.pathname.split('/').length
     const file = "./"+"../".repeat(n)+"src/"+theme+".css"
     document.getElementById("theme_switcher").href = file
     document.getElementById("theme_radio_"+theme).checked = true

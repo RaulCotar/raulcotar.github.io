@@ -4,30 +4,18 @@
 <head id="head">
     <title>Raul Cotar's Blog</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script>
-        function changeTheme(css, radio) {
-            var old = document.getElementById("current_theme")
-            if (old) old.remove()
-            var new_theme = document.createElement('link') 
-            new_theme.rel = 'stylesheet'
-            new_theme.type = 'text/css'
-            new_theme.id = 'current_theme'
-            new_theme.href = css
-            document.getElementById('head').append(new_theme);
-            document.getElementById(radio).checked = true
-        }
-    </script>
+    <meta toppath="." name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" type="text/css" id="theme_switcher" href="src/light.css">
 </head>
 
-<body onLoad="changeTheme('css/lightmode.css', 'theme_lit')">
+<body class="bbody">
     <header id="header">
         <a href="./index.html">Home</a>
         <a href="https://github.com/RaulCotar">GitHub</a>
         <a>
-            <input type="radio" name="theme_radio" id="theme_drk" title="dark theme" onclick="changeTheme('css/darkmode.css', 'theme_drk')" class="theme_button">
-            <input type="radio" name="theme_radio" id="theme_lit" title="light theme" onclick="changeTheme('css/lightmode.css', 'theme_lit')" class="theme_button">lit
+            <input id="theme_radio_dark" type="radio" name="theme_radio" title="dark theme" onclick="changeTheme('dark')" class="theme_switch">
+            <input id="theme_radio_light" type="radio" name="theme_radio" title="light theme" onclick="changeTheme('light')" class="theme_switch" checked>
         </a>
     </header>
 
@@ -40,21 +28,24 @@
         <h2>
             Posts
         </h2>
-
+        
         <div class="index_entry">
             <time datetime="2023-10-01T00:00:00Z">10 Oct 2023</time>
-            <a href="./test.html">Post template - HTML test</a>
+            <a href="posts/test.html">Post template - HTML test</a>
         </div>
 
         <h2>
             Misc
         </h2>
-
+        
     </main>
 </body>
 
 <footer>
-    &ltfooter&gt
+    Last updated on: TODO
+    <div style="float: right">Distributed under <a href="../LICENSE">CC-BY-SA 4.0</a></div>
 </footer>
+
+<script src="src/theme-switcher.js"></script>
 
 </html>

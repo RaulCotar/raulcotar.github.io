@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head">
+    <title>Raul Cotar's Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="../src/style.css">
+    <link rel="stylesheet" type="text/css" id="theme_switcher" href="../src/light.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="../index.html">Home</a>
+        <a href="https://github.com/RaulCotar">GitHub</a>
+        <a>
+            <input id="theme_radio_dark" type="radio" name="theme_radio" title="dark theme" onclick="changeTheme('dark')" class="theme_switch">
+            <input id="theme_radio_light" type="radio" name="theme_radio" title="light theme" onclick="changeTheme('light')" class="theme_switch" checked>
+        </a>
+    </header>
+    
+    <main>
+        $body$
+    </main>
+</body>
+
+<footer>
+    Last updated on: <a class="time">$date$</a>
+    <div style="float: right">Distributed under <a href="../LICENSE">CC-BY-SA 4.0</a></div>
+</footer>
+
+<script src="../src/theme-switcher.js"></script>
+
+</html>

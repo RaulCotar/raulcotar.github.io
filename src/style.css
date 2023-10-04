@@ -2,11 +2,15 @@
 
 body {
     margin: 0 auto;
-    max-width: 50em;
+    max-width: 60em;
     font-family: "Verdana", "Helvetica", "Open Sans", "Arial", sans-serif;
     line-height: 1.5;
-    padding: 4em 1em;
     padding-top: 1em;
+}
+
+main {
+    padding-bottom: 2em;
+    border-bottom: solid 0.1em
 }
 
 pre {
@@ -30,7 +34,7 @@ h2 {
 }
 
 footer {
-    padding-top: 2.5em;
+    padding-top: 0.5em;
     font-size: smaller;
 }
 
@@ -38,8 +42,7 @@ footer {
     line-height: 2em;
 }
 
-.theme_button {
-    border-radius: 12px;
+.theme_switch {
     float: right;
     margin: 4px 2px;
     cursor: pointer;

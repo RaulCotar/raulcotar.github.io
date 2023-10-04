@@ -10,7 +10,8 @@ pre {
 }
 
 pre,
-code {
+code,
+header {
     background: #d6d6d0;
 }
 

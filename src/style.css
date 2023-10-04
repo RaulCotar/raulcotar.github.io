@@ -49,6 +49,14 @@ footer {
     cursor: pointer;
 }
 
+header {
+    border-radius: 4px;
+    padding-bottom: 0.1em;
+    padding-top: 0.1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
 .header_link {
     padding-right: 0.25em;
 }

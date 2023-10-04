@@ -40,12 +40,17 @@ footer {
 
 .index_entry {
     line-height: 2em;
+    list-style-type: none;
 }
 
 .theme_switch {
     float: right;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+.header_link {
+    padding-right: 0.25em;
 }
 
 time {

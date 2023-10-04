@@ -6,19 +6,19 @@
     <meta charset="utf-8" />
     <meta toppath="." name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <link rel="stylesheet" type="text/css" href="src/style.css">
-    <link rel="stylesheet" type="text/css" id="theme_switcher" href="src/light.css">
+    <link rel="stylesheet" type="text/css" id="theme_switcher" href="src/dark.css">
 </head>
 
-<body class="bbody">
-    <header id="header">
-        <a href="./index.html">Home</a>
-        <a href="https://github.com/RaulCotar">GitHub</a>
-        <a>
-            <input id="theme_radio_dark" type="radio" name="theme_radio" title="dark theme" onclick="changeTheme('dark')" class="theme_switch">
-            <input id="theme_radio_light" type="radio" name="theme_radio" title="light theme" onclick="changeTheme('light')" class="theme_switch" checked>
-        </a>
-    </header>
+<header id="header">
+    <a class="header_link" href="./index.html">Home</a>
+    <a class="header_link" href="https://github.com/RaulCotar">GitHub</a>
+    <a>
+        <input id="theme_radio_dark" type="radio" name="theme_radio" title="dark theme" onclick="changeTheme('dark')" class="theme_switch" checked>
+        <input id="theme_radio_light" type="radio" name="theme_radio" title="light theme" onclick="changeTheme('light')" class="theme_switch">
+    </a>
+</header>
 
+<body>
     <section id="about">
         <h2>About Me</h2>
         <p>I have internet page.</p>
@@ -29,10 +29,27 @@
             Posts
         </h2>
         
-        <div class="index_entry">
-            <time datetime="2023-10-01T00:00:00Z">10 Oct 2023</time>
-            <a href="posts/test.html">Post template - HTML test</a>
-        </div>
+        <ul>
+            <li class="index_entry">
+                <time datetime="2023-10-04">04 Oct 2023</time>
+                <a href="posts/mywebsite.html">My first website</a>
+            </li>
+        </ul>
+        
+        <h2>
+            Status Updates
+        </h2>
+        
+        <ul>
+            <li class="index_entry">
+                <time datetime="2023-10-02">02 Oct 2023</time>
+                Working on the website release
+            </li>
+            <li class="index_entry">
+                <time datetime="2023-10-01">01 Oct 2023</time>
+                Got a Thinkpad X1 Yoga G3. Keyboard is not great.
+            </li>
+        </ul>
 
         <h2>
             Misc
@@ -42,8 +59,8 @@
 </body>
 
 <footer>
-    Last updated on: TODO
-    <div style="float: right">Distributed under <a href="../LICENSE">CC-BY-SA 4.0</a></div>
+    Last updated on: <time id="last_update" datetime="2023-10-04">04 Oct 2023</time>
+    <div style="float: right">Distributed under <a href="LICENSE">CC-BY-SA 4.0</a></div>
 </footer>
 
 <script src="src/theme-switcher.js"></script>

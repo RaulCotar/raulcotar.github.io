@@ -9,5 +9,5 @@ function changeTheme(theme) {
 const onload_saved_theme = localStorage.getItem("saved_theme")
 if (onload_saved_theme != null)
     changeTheme(onload_saved_theme)
-else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
-    changeTheme("dark")
+else if (!window.matchMedia("(prefers-color-scheme: dark)").matches)
+    changeTheme("light")

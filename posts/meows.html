@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head">
+    <title>RCB - MEOWS - My (first) web server</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="../src/style.css">
+    <link rel="stylesheet" type="text/css" id="theme_switcher" href="../src/dark.css">
+</head>
+
+<header id="header">
+    <a class="header_link" href="../index.html">Home</a>
+    <a class="header_link" href="https://github.com/RaulCotar">GitHub</a>
+    <a class="header_link" href="https://github.com/RaulCotar/RaulCotar.github.io">Site Repo</a>
+    <a>
+        <input id="theme_radio_dark" type="radio" name="theme_radio" title="dark theme" onclick="changeTheme('dark')" class="theme_switch" checked>
+        <input id="theme_radio_light" type="radio" name="theme_radio" title="light theme" onclick="changeTheme('light')" class="theme_switch">
+    </a>
+</header>
+
+<body>
+    <main>
+        <h1 id="meows---my-first-web-server">MEOWS - My (first) web
+        server</h1>
+        <p>The <strong>M</strong>iniscale <strong>E</strong>fficient
+        <strong>O</strong>pen <strong>W</strong>eb
+        <strong>S</strong>erver is the newest addition in my suite of
+        applets that I write during lectures and late at night. As the
+        name implies, it is just a simple server designed to serve
+        static pages while not draining too much battery life - which it
+        achieves. You can check it out <a
+        href="https://github.com/raulcotar/meows">on GitHub</a>.</p>
+        <p>I intend to use it as a local server for viewing pages of
+        this website while I work on them, and that is reflected in the
+        current design and implementation. Especially the latter, it is…
+        not great. String processing in particular is done in a pretty
+        janky way. On the flip side, it is pretty quick and simple
+        (&lt;180 LOC!) and supports multiple clients.</p>
+        <p>A version 2.0 is planned. The main 2 functional changes will
+        be:</p>
+        <ul>
+        <li>server-sent events - a must for my usecase</li>
+        <li>the MEOWS <em>library</em> and API - to enable scripting and
+        on-demand page generation</li>
+        </ul>
+        <p>Considering this is my first interaction with web sockets,
+        that I wrote everything in a text editor without any plugins,
+        and that I was half asleep during most of the 2-day-long
+        development process, I am quite happy with the results I got so
+        far.</p>
+    </main>
+</body>
+
+<footer>
+    Last updated on: <time id="last_update" datetime="2023-10-12">12 Oct
+2023</time>
+    <div style="float: right">Distributed under <a href=https://creativecommons.org/licenses/by-sa/4.0/deed.en>CC-BY-SA 4.0</a></div>
+</footer>
+
+<script src="../src/theme-switcher.js"></script>
+
+</html>

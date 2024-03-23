@@ -1,0 +1,77 @@
+:root {
+	--light-bg: #eeeeea;
+	--light-fg: #000;
+	--light-acc: lightseagreen;
+	--light-fnt: gray;
+	--light-lnk: #0000EE;
+	--light-lnkv: #551A8B;
+	
+	--dark-bg: #111;
+	--dark-fg: #fffaee;
+	--dark-acc: lightseagreen;
+	--dark-fnt: gray;
+	--dark-lnk: #89a6ff;
+	--dark-lnkv: #f690ff;
+
+	background: var(--col-bg);
+	color: var(--col-fg);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--col-bg: var(--light-bg);
+		--col-fg: var(--light-fg);
+		--col-acc: var(--light-acc);
+		--col-fnt: var(--light-fnt);
+		--col-lnk: var(--light-lnk);
+		--col-lnkv: var(--light-lnkv);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--col-bg: var(--dark-bg);
+		--col-fg: var(--dark-fg);
+		--col-acc: var(--dark-acc);
+		--col-fnt: var(--dark-fnt);
+		--col-lnk: var(--dark-lnk);
+		--col-lnkv: var(--dark-lnkv);
+	}
+}
+
+a {
+	color: var(--col-lnk);
+}
+
+a:visited {
+	color: var(--col-lnkv);
+}
+
+a:active {
+	color: var(--col-acc);
+}
+
+.accent {
+	color: var(--col-acc);
+}
+
+.faint {
+	color: var(--col-fnt);
+}
+
+.two-columns::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	float: left;
+	width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+	.column {
+		width: 100%;
+	}
+}

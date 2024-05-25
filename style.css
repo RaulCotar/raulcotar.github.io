@@ -1,204 +1,94 @@
-$if(document-css)$
-html {
-$if(mainfont)$
-  font-family: $mainfont$;
-$endif$
-$if(fontsize)$
-  font-size: $fontsize$;
-$endif$
-$if(linestretch)$
-  line-height: $linestretch$;
-$endif$
-  color: $if(fontcolor)$$fontcolor$$else$#1a1a1a$endif$;
-  background-color: $if(backgroundcolor)$$backgroundcolor$$else$#fdfdfd$endif$;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+:root {
+	/* --page-bg: #f8f5f2; */
+  --page-bg: #f1ede9;
+	--article-bg: #fffefd;
+	--faint-text: #999;
 }
+
+#title-block-header {
+	text-align: center;
+	padding-top: 64px;
+	padding-bottom: 64px;
+}
+
 body {
-  margin: 0 auto;
-  max-width: $if(maxwidth)$$maxwidth$$else$36em$endif$;
-  padding-left: $if(margin-left)$$margin-left$$else$50px$endif$;
-  padding-right: $if(margin-right)$$margin-right$$else$50px$endif$;
-  padding-top: $if(margin-top)$$margin-top$$else$50px$endif$;
-  padding-bottom: $if(margin-bottom)$$margin-bottom$$else$50px$endif$;
-  hyphens: auto;
-  overflow-wrap: break-word;
-  text-rendering: optimizeLegibility;
-  font-kerning: normal;
+	margin: 0 auto;
+	position: relative;
+	max-width: 1152px;
+	background: var(--page-bg);
+	color: #222;
 }
-@media (max-width: 600px) {
-  body {
-    font-size: 0.9em;
-    padding: 12px;
-  }
-  h1 {
-    font-size: 1.8em;
-  }
+
+.left-column {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0 48px;
+	border: 0px;
+	width: 816px;
 }
-@media print {
-  html {
-    background-color: $if(backgroundcolor)$$backgroundcolor$$else$white$endif$;
-  }
-  body {
-    background-color: transparent;
-    color: black;
-    font-size: 12pt;
-  }
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2, h3, h4 {
-    page-break-after: avoid;
-  }
+
+article {
+	padding: 18px;
+	font: normal 16px "PT Serif", Georgia, serif;
+	background: var(--article-bg);
+	hyphens: auto;
 }
-p {
-  margin: 1em 0;
-}
-a {
-  color: $if(linkcolor)$$linkcolor$$else$#1a1a1a$endif$;
-}
-a:visited {
-  color: $if(linkcolor)$$linkcolor$$else$#1a1a1a$endif$;
-}
-img {
-  max-width: 100%;
-}
-svg {
-  height: auto;
-  max-width: 100%;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.4em;
-}
-h5, h6 {
-  font-size: 1em;
-  font-style: italic;
-}
-h6 {
-  font-weight: normal;
-}
-ol, ul {
-  padding-left: 1.7em;
-  margin-top: 1em;
-}
-li > ol, li > ul {
-  margin-top: 0;
-}
-blockquote {
-  margin: 1em 0 1em 1.7em;
-  padding-left: 1em;
-  border-left: 2px solid #e6e6e6;
-  color: #606060;
-}
-$if(abstract)$
-div.abstract {
-  margin: 2em 2em 2em 2em;
-  text-align: left;
-  font-size: 85%;
-}
-div.abstract-title {
-  font-weight: bold;
-  text-align: center;
-  padding: 0;
-  margin-bottom: 0.5em;
-}
-$endif$
-code {
-  font-family: $if(monofont)$$monofont$$else$Menlo, Monaco, Consolas, 'Lucida Console', monospace$endif$;
-$if(monobackgroundcolor)$
-  background-color: $monobackgroundcolor$;
-  padding: .2em .4em;
-$endif$
-  font-size: 85%;
-  margin: 0;
-  hyphens: manual;
-}
-pre {
-  margin: 1em 0;
-$if(monobackgroundcolor)$
-  background-color: $monobackgroundcolor$;
-  padding: 1em;
-$endif$
-  overflow: auto;
-}
-pre code {
-  padding: 0;
-  overflow: visible;
-  overflow-wrap: normal;
-}
-.sourceCode {
- background-color: transparent;
- overflow: visible;
-}
+
 hr {
-  background-color: #1a1a1a;
-  border: none;
-  height: 1px;
-  margin: 1em 0;
+	color: var(--article-bg);
 }
-table {
-  margin: 1em 0;
-  border-collapse: collapse;
-  width: 100%;
-  overflow-x: auto;
-  display: block;
-  font-variant-numeric: lining-nums tabular-nums;
+
+.date {
+	color: var(--faint-text);
+	font: 13px "Open Sans", "Lucida Sans Unicode", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	text-decoration: none;
 }
-table caption {
-  margin-bottom: 0.75em;
+
+.date:hover {
+	color: #0080ca;
 }
-tbody {
-  margin-top: 0.5em;
-  border-top: 1px solid $if(fontcolor)$$fontcolor$$else$#1a1a1a$endif$;
-  border-bottom: 1px solid $if(fontcolor)$$fontcolor$$else$#1a1a1a$endif$;
+
+nav {
+  width: 192px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 48px;
+  padding: 0 40px 24px 40px;
+  font: 13px/20px "Open Sans", "Lucida Sans Unicode", sans-serif;
+  color: #8d6021;
 }
-th {
-  border-top: 1px solid $if(fontcolor)$$fontcolor$$else$#1a1a1a$endif$;
-  padding: 0.25em 0.5em 0.25em 0.5em;
+
+nav a {
+	color: #b47a29;
 }
-td {
-  padding: 0.125em 0.5em 0.25em 0.5em;
+
+nav a:not(:hover) {
+	text-decoration: none;
 }
-header {
-  margin-bottom: 4em;
-  text-align: center;
+
+nav img.profpic {
+	display: block;
+	margin: -8px auto 16px;
+	border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: var(--article-bg);
+  width: 192px;
+  border: solid 8px var(--article-bg);
+  border-radius: 4px;
 }
-#TOC li {
-  list-style: none;
+
+.backtop {
+	position: absolute;
+	bottom: -2em;
+	right: 2px;
+	color: var(--faint-text);
+	font-size: 13px;
 }
-#TOC ul {
-  padding-left: 1.3em;
-}
-#TOC > ul {
-  padding-left: 0;
-}
-#TOC a:not(:hover) {
-  text-decoration: none;
-}
-$endif$
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-/* The extra [class] is a hack that increases specificity enough to
-   override a similar rule in reveal.js */
-ul.task-list[class]{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  font-size: inherit;
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
-$if(quotes)$
-q { quotes: "“" "”" "‘" "’"; }
-$endif$
-$if(displaymath-css)$
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
-$endif$
-$if(highlighting-css)$
-/* CSS for syntax highlighting */
-$highlighting-css$
-$endif$
-$if(csl-css)$
-$styles.citations.html()$
-$endif$

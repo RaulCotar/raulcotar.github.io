@@ -4,12 +4,12 @@ DEPS := template.html
 RESOURCES := $(patsubst %,build/%,$(wildcard res/**))
 
 .PHONY: all
-all: $(PAGES) $(RESOURCES)
+all: $(PAGES) $(RESOURCES) build/style.css
 
 build/%.html: pages/%.md $(DEPS) | build
 	pandoc --from=commonmark_x --to=html --template=template.html -o $@ $<
 
-build/style.css: newstyle.css | build
+build/style.css: style.css | build
 	cp $< $@
 
 build/res/%: res/% | build/res

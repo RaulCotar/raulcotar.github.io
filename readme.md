@@ -4,7 +4,6 @@ File structure:
 - [build]() - automatically generated, holds the site being served
 - [pages](pages) - holds all the markdown source for the pages
 - [res](res) - holds resources like images, everything in here gets copied to [build/res]()
-- [draft](draft) - keep my draft pages and resources in here
 - [template.html](template.html) pandoc conversion template
 - [styles.html](styles.html) used to generate css (included in the template)
 

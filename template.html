@@ -10,40 +10,39 @@
 	<meta name="generator" content="pandoc" />
 
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />
-	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Source+Code+Pro|PT+Serif:400,700,400italic,700italic'>
-	<!-- <link rel="stylesheet" href="/style.css" type="text/css" /> -->
-	<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
 
 	<title>$pagetitle$</title>
-
-	<style>
-		$styles.html()$
-	</style>
-	$if(math)$
-	$if(mathjax)$
-	<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-	$endif$
-	$math$
-	$endif$
 </head>
 
 <body>
-	<article>
-		<header id="title-block-header">
-			<h1 class="title">$title$</h1>
-			$if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
-			<p class="date">$date-created$</p>
-			$if(date-modified)$<p class="date">update $date-modified$</p>$endif$
-		</header>
+	<div class="left-column">
+		<article>
+			<header id="title-block-header">
+				<h1 style="font-size: 36px;">$title$</h1>
+				$if(subtitle)$<h3>$subtitle$</h3>$endif$
+			</header>
+			<a class="date" href="">$date-created$</a>
+			$if(date-modified)$<span class="date" style="float: right;">updated $date-modified$</span>$endif$
+			<hr style="margin-bottom: 32px;">
 
-		$if(toc)$
-		<nav id="$idprefix$TOC" role="doc-toc">
-			$table-of-contents$
-		</nav>
-		$endif$
+			$if(toc)$
+			<nav id="$idprefix$TOC" role="doc-toc">
+				$table-of-contents$
+			</nav>
+			$endif$
 
-		$body$
-	</article>
+			$body$
+		</article>
+		<a class="backtop" href="#top">Back to top ⮭</a>
+	</div>
+	<nav>
+		<div>
+			<a href="/"><img src="res/highschool_pic.jpg" class="profpic" alt="Picture of Raul in highschool."></a>
+			<p>Hi! I'm <strong>Raul Cotar</strong>. I am passionate about science and computers, I make CS projects as a hobby and also do a bachelor's in computer science on the side :)</p>
+			<p>You can email me at <a href="mailto:raulcotar00@gmail.com"><strong>raulcotar00@gmail.com</strong></a> or reach me on <a href="https://github.com/RaulCotar"><strong>GitHub</strong></a>.</p>
+		</div>
+	</nav>
 </body>
 
 </html>

@@ -1,42 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$" $if(dir)$ dir="$dir$" $endif$>
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Raul Cotar</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
-    <link rel="alternate" type="application/rss+xml" title="Raul Cotar" href="/rss.xml">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <script src="/theme_switch.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="dcterms.created" content="$date-created$" />
+	<meta name="keywords" content="$for(tags)$$tags$$sep$, $endfor$" />
+	<meta name="description" content="$description$" />
+	<meta name="generator" content="pandoc" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />
+	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Source+Code+Pro|PT+Serif:400,700,400italic,700italic'>
+	<!-- <link rel="stylesheet" href="/style.css" type="text/css" /> -->
+	<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+
+	<title>$pagetitle$</title>
+
+	<style>
+		$styles.html()$
+	</style>
+	$if(math)$
+	$if(mathjax)$
+	<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+	$endif$
+	$math$
+	$endif$
 </head>
 
-<nav>
-    <span id="linkpath">
-        <a href="/">/home/</a><a href="/">post/</a><a href="$outputfile$.html">$outputfile$</a>
-    </span>
-    <span style="float:right">
-        <input type="checkbox" id="theme-switch" style="display:none" onchange="setTheme(this.checked)">
-        <label for="theme-switch" style="cursor:pointer; border-radius:3px" title="switch theme">💡</span>
-    </span>
-    <input type="search-box" style="float:right; border-radius:3px" title="full regex search" placeholder="WIP">
-</nav>
-
-<hr>
-
-<div class="two-columns">
-    <h1 class="column">$title$</h1>
-    <div class="faint" style="float:right">Last update: <time datetime="2024-03-22">2024 Mar 23<br>Posted on: <time datetime="2024-03-22">2024 Mar 22</time></div>
-</div>
-
 <body>
-    $body$
+	<article>
+		<header id="title-block-header">
+			<h1 class="title">$title$</h1>
+			$if(subtitle)$<p class="subtitle">$subtitle$</p>$endif$
+			<p class="date">$date-created$</p>
+			$if(date-modified)$<p class="date">update $date-modified$</p>$endif$
+		</header>
+
+		$if(toc)$
+		<nav id="$idprefix$TOC" role="doc-toc">
+			$table-of-contents$
+		</nav>
+		$endif$
+
+		$body$
+	</article>
 </body>
-
-<hr>
-
-<footer>
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">CC-BY-SA 4.0</a>
-</footer>
 
 </html>

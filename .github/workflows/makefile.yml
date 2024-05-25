@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: pandoc/actions/setup
+    - uses: r-lib/actions/setup-pandoc@v2
+      with:
+        pandoc-version: latest
     - name: build site
       run: make all

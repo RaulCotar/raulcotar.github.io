@@ -22,9 +22,11 @@
 				<h1 style="font-size: 36px;">$title$</h1>
 				$if(subtitle)$<h3>$subtitle$</h3>$endif$
 			</header>
+			$if(isindex)$$else$
 			<a class="date" href="">$date-created$</a>
 			$if(date-modified)$<span class="date" style="float: right;">updated $date-modified$</span>$endif$
 			<hr style="margin-bottom: 32px;">
+			$endif$
 
 			$if(toc)$
 			<nav id="$idprefix$TOC" role="doc-toc">

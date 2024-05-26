@@ -3,8 +3,10 @@
 
 :root {
 	/* --page-bg: #f8f5f2; */
-  --page-bg: #f1ede9;
-	--article-bg: #fffefd;
+  /* --page-bg: #f1ede9; */
+	--page-bg: #f0efe7;
+	/* --article-bg: #fffefd; */
+	--article-bg: #fcfcfa;
 	--faint-text: #999;
 }
 
@@ -45,7 +47,7 @@ hr {
 .date {
 	color: var(--faint-text);
 	font: 13px "Open Sans", "Lucida Sans Unicode", sans-serif;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	letter-spacing: 0.5px;
 	text-decoration: none;
 }
@@ -91,4 +93,8 @@ nav img.profpic {
 	right: 2px;
 	color: var(--faint-text);
 	font-size: 13px;
+}
+
+.index-entry {
+	padding: 0.5em 1em 0.5em 1em;
 }
